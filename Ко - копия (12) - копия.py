@@ -40,7 +40,7 @@ class Graph:
             if i.name==name2:
                 node12=i
         self.connect(node11, node12, weight1)
-'''Соединяет станции по названию'''
+    '''Соединяет станции по названию'''
     def get_index_from_node(self, node):
         if isinstance(node, int):
             return(node)
@@ -82,7 +82,7 @@ class Graph:
                     dist[node.index][0]=tot_dist
                     dist[node.index][1]=list(dist[min_node][1])
                     dist[node.index][1].append(node)
-        return [dist[node2.index], dist[100]]
+        return [dist[node2.index]]
     '''Находит кратчайший путь между заданными узлами'''
 n1=Node('Пятницкое шоссе', 3, 1)
 n2=Node('Митино', 3, 2)
